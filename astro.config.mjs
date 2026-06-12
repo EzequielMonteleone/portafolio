@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ezequielmonteleone.vercel.app',
+  site: 'https://portafolio-tawny-five-16.vercel.app/',
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],
