@@ -1,0 +1,53 @@
+---
+import type { Content } from '../i18n/types';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+const { experience } = content;
+---
+
+<section
+  id="experience"
+  class="mx-auto max-w-5xl scroll-mt-24 px-5 py-20 sm:px-8"
+>
+  <h2 class="reveal mb-12 flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-accent">
+    <span class="h-px w-8 bg-accent"></span>
+    {experience.title}
+  </h2>
+
+  <ol class="relative border-l border-white/10">
+    {
+      experience.items.map((item, i) => (
+        <li class="relative mb-12 ml-6 last:mb-0">
+          <span class="absolute -left-8 mt-1.5 h-3.5 w-3.5 rounded-full border-2 border-accent bg-zinc-950"></span>
+          <div
+            class="reveal"
+            style={`animation-delay: ${Math.min(i, 4) * 80}ms`}
+          >
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="text-lg font-semibold text-zinc-100">
+                {item.role}
+                <span class="text-accent"> · {item.company}</span>
+              </h3>
+              <span class="text-xs font-medium uppercase tracking-wider text-zinc-500">
+                {item.period}
+              </span>
+            </div>
+            <p class="mt-0.5 text-sm text-zinc-500">{item.location}</p>
+            <ul class="mt-4 space-y-2">
+              {item.bullets.map((b) => (
+                <li class="flex gap-3 text-sm leading-relaxed text-zinc-400">
+                  <span class="mt-2 h-1 w-1 flex-none rounded-full bg-zinc-600" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</section>

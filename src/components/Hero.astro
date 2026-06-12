@@ -1,0 +1,59 @@
+---
+import type { Content } from '../i18n/types';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+const { hero } = content;
+---
+
+<section
+  class="relative mx-auto flex min-h-[88vh] max-w-5xl flex-col justify-center px-5 pt-28 pb-16 sm:px-8"
+>
+  <p
+    class="reveal mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-300"
+  >
+    <span class="relative flex h-2 w-2">
+      <span
+        class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"
+      ></span>
+      <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"
+      ></span>
+    </span>
+    {hero.role}
+  </p>
+
+  <h1
+    class="reveal max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-zinc-50 sm:text-6xl lg:text-7xl"
+    style="animation-delay: 80ms"
+  >
+    {hero.name}
+  </h1>
+
+  <p
+    class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl"
+    style="animation-delay: 160ms"
+  >
+    {hero.tagline}
+  </p>
+
+  <div
+    class="reveal mt-10 flex flex-wrap items-center gap-4"
+    style="animation-delay: 240ms"
+  >
+    <a
+      href="#contact"
+      class="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:opacity-90"
+    >
+      {hero.ctaContact}
+    </a>
+    <a
+      href="#projects"
+      class="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-zinc-200 transition hover:border-white/40"
+    >
+      {hero.ctaProjects}
+    </a>
+  </div>
+</section>

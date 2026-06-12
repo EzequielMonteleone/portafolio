@@ -1,0 +1,21 @@
+---
+import type { Content } from '../i18n/types';
+import SocialLinks from './SocialLinks.astro';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5">
+  <div
+    class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-5 py-8 text-xs text-zinc-500 sm:flex-row sm:px-8"
+  >
+    <p>&copy; {year} Ezequiel Monteleone. {content.footer.rights}</p>
+    <SocialLinks size={16} />
+    <p>Buenos Aires, Argentina</p>
+  </div>
+</footer>

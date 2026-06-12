@@ -1,0 +1,43 @@
+---
+import type { Content } from '../i18n/types';
+import SocialLinks from './SocialLinks.astro';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+const { contact } = content;
+---
+
+<section id="contact" class="mx-auto max-w-5xl scroll-mt-24 px-5 py-20 sm:px-8">
+  <h2 class="reveal mb-8 flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-accent">
+    <span class="h-px w-8 bg-accent"></span>
+    {contact.title}
+  </h2>
+
+  <div
+    class="reveal rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent p-8 sm:p-12"
+  >
+    <p class="max-w-xl text-xl font-medium leading-relaxed text-zinc-200">
+      {contact.intro}
+    </p>
+
+    <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+      <a
+        href={`mailto:${contact.email}`}
+        class="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:opacity-90"
+      >
+        {contact.email}
+      </a>
+      <p class="text-sm text-zinc-400">
+        <span class="font-semibold text-zinc-300">{contact.locationLabel}:</span>
+        {contact.location}
+      </p>
+    </div>
+
+    <div class="mt-6 border-t border-white/10 pt-6">
+      <SocialLinks />
+    </div>
+  </div>
+</section>

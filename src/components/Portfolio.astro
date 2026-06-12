@@ -1,0 +1,35 @@
+---
+import type { Lang } from '../i18n/types';
+import { getContent } from '../i18n/ui';
+import Layout from '../layouts/Layout.astro';
+import Nav from './Nav.astro';
+import Hero from './Hero.astro';
+import About from './About.astro';
+import Experience from './Experience.astro';
+import Skills from './Skills.astro';
+import Projects from './Projects.astro';
+import Education from './Education.astro';
+import Contact from './Contact.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const content = getContent(lang);
+---
+
+<Layout lang={lang} title={content.meta.title} description={content.meta.description}>
+  <Nav lang={lang} content={content} />
+  <main>
+    <Hero content={content} />
+    <About content={content} />
+    <Experience content={content} />
+    <Skills content={content} />
+    <Projects content={content} />
+    <Education content={content} />
+    <Contact content={content} />
+  </main>
+  <Footer content={content} />
+</Layout>
