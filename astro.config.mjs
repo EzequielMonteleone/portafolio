@@ -6,11 +6,14 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://ezequielmonteleone.vercel.app/',
   i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en'],
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
     routing: {
       prefixDefaultLocale: false,
     },
+  },
+  redirects: {
+    '/en': '/',
   },
   vite: {
     plugins: [tailwindcss()],

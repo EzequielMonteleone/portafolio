@@ -36,4 +36,13 @@ const { skills } = content;
       ))
     }
   </div>
+
+  {
+    skills.spoken && (
+      <p class="reveal mt-8 text-sm text-zinc-400">
+        <span class="font-semibold text-zinc-300">{skills.spoken.label}:</span>{' '}
+        {skills.spoken.items.join(' · ')}
+      </p>
+    )
+  }
 </section>

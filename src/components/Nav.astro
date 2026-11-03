@@ -1,6 +1,6 @@
 ---
 import type { Content, Lang } from '../i18n/types';
-import { getAlternateHref } from '../i18n/ui';
+import { getAlternateHref, getHomeHref } from '../i18n/ui';
 import SocialLinks from './SocialLinks.astro';
 
 interface Props {
@@ -30,7 +30,7 @@ const links = [
     class="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8"
   >
     <a
-      href={lang === 'es' ? '/' : '/en'}
+      href={getHomeHref(lang)}
       class="text-sm font-bold tracking-tight text-zinc-100 transition hover:text-accent"
     >
       EM<span class="text-accent">.</span>

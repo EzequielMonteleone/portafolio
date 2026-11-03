@@ -4,7 +4,7 @@ Portafolio personal bilingüe (español / inglés) construido con [Astro](https:
 
 ## Características
 
-- Bilingüe con i18n nativo de Astro: español en `/` (idioma por defecto) e inglés en `/en`.
+- Bilingüe con i18n nativo de Astro: inglés en `/` (idioma por defecto) y español en `/es`.
 - Toggle de idioma en la barra de navegación.
 - Diseño oscuro, minimalista y responsive.
 - Secciones: Sobre mí, Experiencia, Skills, Proyectos, Educación y Contacto.
@@ -18,8 +18,8 @@ src/
 ├── i18n/            # Contenido y helpers de idiomas (es.ts, en.ts, ui.ts)
 ├── layouts/         # Layout base con <head> y SEO
 ├── pages/
-│   ├── index.astro      # Español (/)
-│   └── en/index.astro   # Inglés (/en)
+│   ├── index.astro      # Inglés (/)
+│   └── es/index.astro   # Español (/es)
 └── styles/global.css    # Tailwind + estilos globales
 ```
 

@@ -1,11 +1,19 @@
 export type Lang = 'es' | 'en';
 
+export interface ExperienceFocus {
+  title: string;
+  bullets: string[];
+  stack?: string;
+}
+
 export interface ExperienceItem {
   company: string;
   role: string;
   period: string;
   location: string;
   bullets: string[];
+  stack?: string;
+  focuses?: ExperienceFocus[];
 }
 
 export interface ProjectItem {
@@ -13,6 +21,7 @@ export interface ProjectItem {
   role: string;
   description: string;
   url?: string;
+  featured?: boolean;
 }
 
 export interface EducationItem {
@@ -54,11 +63,13 @@ export interface Content {
   };
   experience: {
     title: string;
+    stackLabel: string;
     items: ExperienceItem[];
   };
   skills: {
     title: string;
     groups: SkillGroup[];
+    spoken?: SkillGroup;
   };
   projects: {
     title: string;
@@ -72,6 +83,8 @@ export interface Content {
     title: string;
     intro: string;
     email: string;
+    phone: string;
+    phoneHref: string;
     location: string;
     locationLabel: string;
   };

@@ -2,9 +2,9 @@ import type { Content } from './types';
 
 export const es: Content = {
   meta: {
-    title: 'Ezequiel Monteleone — Senior Mobile/Frontend Engineer',
+    title: 'Ezequiel Monteleone — Senior Software Engineer',
     description:
-      'Ingeniero de software senior con más de 10 años de experiencia construyendo aplicaciones escalables en mobile, frontend y backend. React Native, React, TypeScript.',
+      'Ingeniero de software senior con más de 10 años de experiencia en full-stack, mobile, frontend y backend. React Native, React, TypeScript, Node.js, .NET e ingeniería de IA.',
   },
   nav: {
     about: 'Sobre mí',
@@ -16,32 +16,56 @@ export const es: Content = {
   },
   hero: {
     name: 'Ezequiel Monteleone',
-    role: 'Senior Mobile / Frontend Engineer',
+    role: 'Senior Software Engineer',
     tagline:
-      'Más de 10 años diseñando y construyendo aplicaciones escalables en mobile, frontend y backend.',
+      'Más de 10 años diseñando y construyendo aplicaciones escalables en full-stack, mobile y backend, e integrando IA en productos reales.',
     ctaContact: 'Contactame',
     ctaProjects: 'Ver proyectos',
   },
   about: {
     title: 'Sobre mí',
     paragraphs: [
-      'Ingeniero de software senior con más de 10 años de experiencia diseñando y construyendo aplicaciones escalables a través de ecosistemas mobile, frontend y backend. Sólida base en React Native, React, TypeScript y arquitecturas de software modernas, con experiencia liderando decisiones técnicas, construyendo productos desde cero y colaborando con equipos multidisciplinarios en entornos ágiles.',
-      'Apasionado por resolver problemas complejos de ingeniería, mejorar el rendimiento y crear sistemas mantenibles pensando en la escalabilidad a largo plazo. Cómodo trabajando a lo largo de todo el ciclo de vida del producto, desde discusiones de arquitectura e infraestructura hasta la implementación y entrega en producción.',
+      'Ingeniero de software senior con más de 10 años de experiencia diseñando y construyendo aplicaciones escalables en ecosistemas full-stack, mobile, frontend y backend. Sólida base en React Native, React, TypeScript, Node.js y .NET, con experiencia diseñando APIs, servicios backend e integraciones.',
+      'Experiencia liderando decisiones técnicas, construyendo productos desde cero y trabajando a lo largo de todo el ciclo de vida del producto, desde la arquitectura y el diseño de sistemas hasta la implementación, el despliegue y la entrega en producción. Cómodo entre frontend y backend, con foco en mantenibilidad, escalabilidad, rendimiento y experiencia de desarrollo.',
+      'Hoy estoy ampliando mi trabajo en ingeniería de IA: aplicaciones con LLMs, agentes, RAG y la integración de esas capacidades en productos de software. Me interesa resolver problemas complejos y usar tecnología nueva para construir soluciones inteligentes, escalables y prácticas.',
     ],
   },
   experience: {
     title: 'Experiencia',
+    stackLabel: 'Tecnologías',
     items: [
       {
         company: 'ITTI',
-        role: 'Mobile Engineer',
+        role: 'Software Engineer',
         period: '2025 — Presente',
         location: 'Buenos Aires',
-        bullets: [
-          'Miembro core del equipo mobile de MUV (driver), contribuyendo a decisiones técnicas y a la evolución del producto.',
-          'Diseñé e implementé arquitecturas en React Native para soluciones de transporte, enfocadas en escalabilidad y rendimiento.',
-          'Colaboré de cerca con los equipos de backend y producto para definir el alcance de las features, la viabilidad técnica y la estrategia de entrega.',
-          'Tomé ownership de features de punta a punta, desde el diseño técnico hasta el rollout en producción.',
+        bullets: [],
+        focuses: [
+          {
+            title: 'Ubox — Ueno Bank',
+            bullets: [
+              'Contribuí a Ubox, la plataforma de seguimiento de paquetes de Ueno Bank para que los clientes monitoreen compras internacionales desde el origen hasta la entrega final en la app.',
+              'Construí y mantuve features mobile multiplataforma con Flutter, con foco en rendimiento, usabilidad y una experiencia fluida.',
+              'Desarrollé servicios backend con Node.js y Fastify: APIs escalables y lógica de negocio para el tracking y las actualizaciones de estado en tiempo real.',
+              'Implementé inyección de dependencias, validación de requests, caché e integraciones con servicios externos.',
+              'Integré capacidades de IA en el backend con LangChain y LangGraph para workflows con LLMs, orquestación de agentes y tareas en varios pasos.',
+              'Trabajé con producto, backend y mobile para definir requerimientos, entregar features y cuidar la calidad de los releases.',
+            ],
+            stack:
+              'Flutter, Node.js, Fastify, TypeScript, tsyringe, LangChain, LangGraph, Spec Kit',
+          },
+          {
+            title: 'MUV — apps de conductor y pasajero',
+            bullets: [
+              'Contribuí a la evolución de las apps de conductor y pasajero, desde el diseño y la implementación hasta la entrega, en conjunto con backend.',
+              'Participé en decisiones de arquitectura mobile, manejo de estado y flujo de datos, con foco en escalabilidad, rendimiento y mantenibilidad.',
+              'Trabajé en soluciones cross-platform y nativas para una experiencia consistente en Android e iOS.',
+              'Implementé mapas, geolocalización y visualización de datos en tiempo real.',
+              'Participé en tests de integración para sostener la confiabilidad y la estabilidad del producto.',
+            ],
+            stack:
+              'React Native, Expo, Zustand, TanStack Query, Mapbox, Kotlin, Jetpack Compose, SwiftUI. IA: Cursor, MCPs, agentes y skills',
+          },
         ],
       },
       {
@@ -56,6 +80,8 @@ export const es: Content = {
           'Trabajé directamente con stakeholders para traducir requerimientos de negocio en soluciones técnicas, influyendo en decisiones de producto y arquitectura.',
           'Mentoreé desarrolladores y revisé código para asegurar calidad y buenas prácticas.',
         ],
+        stack:
+          'React Native, Redux, Redux Toolkit, GraphQL, Redux Saga, TypeScript, iOS, Android, React.js, Next.js, Node.js, Vue.js. IA: Copilot',
       },
       {
         company: 'EV Jungle',
@@ -68,6 +94,7 @@ export const es: Content = {
           'Diseñé lógica de negocio basada en flujos con Node-RED, mejorando la mantenibilidad y la visibilidad operativa.',
           'Actué como puente entre los equipos de mobile y backend para alinear soluciones técnicas.',
         ],
+        stack: 'Android, iOS, Java, Node-RED, React.js, Next.js, GraphQL',
       },
       {
         company: 'Cloud(X)',
@@ -79,6 +106,8 @@ export const es: Content = {
           'Construí arquitecturas frontend escalables con React, React Native, Next.js, iOS, Android y Xamarin Forms.',
           'Trabajé con equipos distribuidos, adaptando soluciones a diferentes mercados y requerimientos.',
         ],
+        stack:
+          'React Native, Redux, Redux Toolkit, Redux Saga, GraphQL, TypeScript, iOS, Android, React.js, Next.js, Node.js, Vue.js',
       },
       {
         company: 'Flux IT',
@@ -90,6 +119,7 @@ export const es: Content = {
           'Participé en decisiones de diseño técnico relacionadas con seguridad, rendimiento y modularización.',
           'Trabajé con stacks de Android e iOS.',
         ],
+        stack: 'Android, iOS',
       },
       {
         company: 'X28 Alarmas',
@@ -101,6 +131,8 @@ export const es: Content = {
           'Tomé ownership del análisis de requerimientos, diseño de sistemas e implementación usando C#, .NET y tecnologías mobile.',
           'Traduje procesos de negocio en soluciones de software escalables, sentando las bases para el crecimiento futuro.',
         ],
+        stack:
+          'Android, iOS, .NET, ASP.NET, MVC 4, SQL Server, Razor, C#, Entity Framework, LINQ',
       },
     ],
   },
@@ -112,6 +144,7 @@ export const es: Content = {
         items: [
           'React',
           'React Native',
+          'Flutter',
           'JavaScript',
           'TypeScript',
           'Swift',
@@ -129,6 +162,7 @@ export const es: Content = {
           'Redux',
           'Redux Toolkit',
           'Redux Saga',
+          'Redux Thunk',
           'Zustand',
           'TanStack Query',
           'Expo',
@@ -141,28 +175,52 @@ export const es: Content = {
           'CircleCI',
           'CI/CD',
           'Serverless',
+          'Cursor',
+          'Claude Code',
+          'Copilot',
         ],
       },
       {
         label: 'IA',
         items: [
-          'Desarrollo asistido por IA (Cursor, Claude, ChatGPT)',
+          'Desarrollo asistido por IA (Cursor, Claude)',
           'Prompt Engineering & Context Design',
           'Debugging, refactor y generación de código con IA',
-          'Agentes de IA & automatización de workflows',
-          'LLM tooling & workflows de productividad',
+          'Agentes de IA y automatización de workflows',
+          'LLM tooling y workflows de productividad',
+          'IA generativa para ingeniería de software',
+          'MCPs',
         ],
       },
     ],
+    spoken: {
+      label: 'Idiomas',
+      items: ['Español', 'Inglés'],
+    },
   },
   projects: {
     title: 'Proyectos',
     items: [
       {
-        name: 'MUV',
-        role: 'Ingeniero Mobile',
+        name: 'Corelia',
+        role: 'Owner',
+        featured: true,
         description:
-          'Implementación de nuevas features mobile usando React Native, Android e iOS.',
+          'Plataforma para administrar edificios y consorcios. Reúne en un solo lugar la propiedad, las unidades, dueños e inquilinos, expensas y espacios compartidos. Los residentes ven lo que deben, reservan amenities y cargan reclamos. Un asistente responde sobre el reglamento y puede preparar una reserva o un reclamo que solo se envía cuando la persona lo confirma.',
+        url: 'https://corelia-admin.vercel.app/',
+      },
+      {
+        name: 'Ueno Bank — uBox',
+        role: 'Software Engineer',
+        description:
+          'Módulo de seguimiento de paquetes. Features mobile en Flutter y servicios backend en Node.js para que los clientes sigan compras internacionales desde el origen hasta la entrega.',
+        url: 'https://www.ueno.com.py/',
+      },
+      {
+        name: 'MUV',
+        role: 'Software Engineer',
+        description:
+          'Features nuevas en las apps de conductor y pasajero con React Native, Android e iOS: mapas, geolocalización y datos en tiempo real.',
         url: 'https://www.itti.digital/',
       },
       {
@@ -176,7 +234,7 @@ export const es: Content = {
         name: 'EV Jungle',
         role: 'Fullstack Developer',
         description:
-          'Features mobile nativas (Kotlin & Swift) y lógica backend en Java. Flujos de negocio creados y testeados con Node-RED.',
+          'Features mobile nativas (Kotlin y Swift) y lógica backend en Java. Flujos de negocio creados y testeados con Node-RED.',
         url: 'https://www.evjungle.com',
       },
       {
@@ -214,6 +272,8 @@ export const es: Content = {
     intro:
       '¿Tenés un proyecto en mente o buscás un ingeniero senior para tu equipo? Escribime.',
     email: 'monteleone.ezequiel@gmail.com',
+    phone: '+54 9 11 2501-0725',
+    phoneHref: 'tel:+5491125010725',
     location: 'Buenos Aires, Argentina',
     locationLabel: 'Ubicación',
   },
